@@ -49,7 +49,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let courses = try JSONDecoder().decode([Course].self, from: data)
                 
                 for eachitem in courses {
-                    if eachitem.code.lowercased().hasPrefix(self.courseCode) {
+                    if eachitem.code.lowercased().hasPrefix(self.courseCode.lowercased()) {
                         self.coursesForDataSource.append(eachitem)
                     }
                 }
